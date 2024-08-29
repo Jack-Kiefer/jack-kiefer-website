@@ -50,55 +50,55 @@
             </div>
         </header>
         <!--================Header Menu Area =================-->
-        
-        <!--================Home Banner Area =================-->
+
+
+         <!--================Home Banner Area =================-->
         <section class="home_banner_area">
             <div class="container box_1620">
                 <div class="banner_inner d-flex align-items-center">
                     <div class="banner_content">
-                        <h2>Pokemon AI</h2>
-                        <p>Harnessing AI to simulate complex Pokemon battle scenarios with strategic decision-making.</p>
+                        <div class="media">
+                            <!-- Embed YouTube Video -->
+                            <section class="project_details_area p_120">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="project_details_text">
+                                                <h3 style="font-size: 36px; font-weight: bold;">Pokemon AI Project Overview</h3>
+                                                <!-- YouTube Embed -->
+                                                <div class="video-container">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FlsZku3VRe0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>                            
+                                                <p>This project showcases an AI that plays Pokémon Platinum autonomously by analyzing in-game visuals and making strategic decisions. It operates by capturing two images: one before and one after a move, and subtracting them to detect changes. A Convolutional Neural Network (CNN) classifies these changes to identify movement or interactions.</p>
+                                                <p>The AI maps out the game environment dynamically, placing walls on the map where it detects obstacles. To handle different game scenarios, it opens the game menu to check if it's in a cutscene or battle. This approach helps the AI differentiate between normal gameplay and events where normal movement isn’t possible.</p>
+                                                <h4>Key Features:</h4>
+                                                <ul>
+                                                    <li>Real-time environment mapping using image subtraction and CNN classification</li>
+                                                    <li>Dynamic detection of cutscenes and battles by checking menu availability</li>
+                                                    <li>Pathfinding to unexplored areas using Breadth-First Search (BFS) through map warp points</li>
+                                                    <li>Handling of various in-game interactions based on visual data analysis</li>
+                                                </ul>
+                                                <p>The AI constructs a comprehensive map structure of all explored areas, marking warp points such as doorways. It uses a BFS algorithm to navigate these points, always seeking the nearest unexplored region to continue its journey, ensuring thorough exploration of the game's world.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="project_sidebar">
+                                                <h4>Project Details</h4>
+                                                <ul>
+                                                    <li><span>Technologies:</span> Python, TensorFlow, Convolutional Neural Networks (CNN)</li>
+                                                    <li><span>Date:</span> August 2024</li>
+                                                    <li><span>Category:</span> AI, Game Development</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--================End Home Banner Area =================-->
-        
-        <!--================Project Details Area =================-->
-        <section class="project_details_area p_120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="project_details_text">
-                            <h3>Pokemon AI Project Overview</h3>
-                            <p>This project focuses on developing an AI capable of simulating and strategizing in Pokemon battles. The AI is trained to understand various combat styles and adapt its approach based on the opponent’s behavior and environmental factors. This project leverages reinforcement learning techniques to build an AI that not only reacts but also anticipates and plans strategies in complex, multi-layered battle scenarios.</p>
-                            <p>Using Python, TensorFlow, and custom AI algorithms, the AI learns from battle data, refining its tactics over multiple iterations. The AI models different roles, such as Medic, Assassin, and Hunter, to simulate realistic gameplay and decision-making.</p>
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Advanced reinforcement learning for strategic combat</li>
-                                <li>Simulation of various AI roles (Medic, Assassin, etc.)</li>
-                                <li>Dynamic adaptation to different battle scenarios</li>
-                                <li>Capability to handle up to six different character types with unique skills and items</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="project_sidebar">
-                            <h4>Project Details</h4>
-                            <ul>
-                                <li><span>Technologies:</span> Python, TensorFlow, Custom AI Algorithms</li>
-                                <li><span>Date:</span> August 2024</li>
-                                <li><span>Category:</span> AI, Game Development</li>
-                            </ul>
-                            <div class="project_images">
-                                <img class="img-fluid" src="img/pokemon-ai.jpg" alt="Pokemon AI Project Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================End Project Details Area =================-->
         
         <!--================Footer Area =================-->
         <footer class="footer_area p_120">

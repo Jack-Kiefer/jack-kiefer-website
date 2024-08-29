@@ -44,6 +44,118 @@ Table of Content:
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.small_banner_area {
+  background-color: #ffffff; /* White background to match the original banner */
+  padding: 30px 0; /* Adjust padding for a balanced look */
+  text-align: center; /* Center-align the text */
+  height: auto; /* Auto height to allow content to define the size */
+  color: #333; /* Dark text color for contrast on white */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  border-bottom: 1px solid #eaeaea; /* Optional: subtle border for separation */
+}
+
+.small_banner_content h2 {
+  font-size: 24px; /* Font size for the heading */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.small_banner_content p {
+  font-size: 16px; /* Font size for the paragraph */
+  margin: 0; /* No additional margins */
+  color: #555; /* Slightly lighter text color for paragraph */
+}
+
+/* Mini Home Banner Area CSS */
+.mini_banner_area {
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    margin-bottom: 100px; /* Reduced margin for a smaller appearance */
+}
+
+.mini_banner_area .box_1620 {
+    min-height: 500px; /* Reduced height compared to the original */
+    border-radius: 12px;
+    position: relative;
+    bottom: -100px; /* Adjusted for the smaller size */
+    background: #fff;
+    padding: 20px; /* Reduced padding */
+    box-shadow: 0px 10px 40px 0px rgba(153, 153, 153, 0.2); /* Softer shadow for a smaller area */
+}
+
+.mini_banner_area .banner_inner {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Adjusted to maintain the height of the container */
+    display: flex;
+}
+
+.mini_banner_area .banner_inner .banner_content {
+    color: #222222;
+    vertical-align: middle;
+    align-self: center;
+    text-align: left;
+}
+
+.mini_banner_area .banner_inner .banner_content .media .d-flex {
+    padding-right: 60px; /* Reduced padding */
+}
+
+.mini_banner_area .banner_inner .banner_content .media .media-body {
+    vertical-align: middle;
+    align-self: center;
+}
+
+.mini_banner_area .personal_text h6 {
+    font-size: 12px; /* Reduced font size */
+    margin-bottom: 8px;
+}
+
+.mini_banner_area .personal_text h3 {
+    font-size: 36px; /* Reduced font size */
+    margin-bottom: 10px;
+}
+
+.mini_banner_area .personal_text h4 {
+    font-size: 18px; /* Reduced font size */
+    margin-bottom: 15px;
+}
+
+.mini_banner_area .personal_text p {
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 20px;
+}
+
+.mini_banner_area .personal_text ul.basic_info {
+    margin-top: 10px; /* Reduced top margin */
+}
+
+.mini_banner_area .personal_text ul.personal_social {
+    margin-top: 8px; /* Reduced top margin */
+}
+
+
+
+
 .resume-link {
   display: inline-flex; /* Flexbox for better alignment of text and icon */
   align-items: center; /* Vertically centers the icon with the text */
@@ -140,7 +252,8 @@ Table of Content:
 .preview-link {
   display: inline-flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px; /* Increased top margin */
+  margin-bottom: 20px; /* Optional: Add bottom margin */
   padding: 12px 30px;
   background-color: #3498db; /* Example primary color */
   color: #ffffff;
@@ -157,6 +270,7 @@ Table of Content:
   background-color: #2c3e50; /* Example secondary color */
   border-color: #2c3e50;
 }
+
 
 .list {
   list-style: none;
@@ -530,7 +644,7 @@ button:focus {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-/* Home Banner Area css
+/* Home Area css
 ============================================================================================ */
 .home_banner_area {
   position: relative;
@@ -2978,7 +3092,7 @@ h6 {
   .personal_text .basic_info li:last-child {
     margin-bottom: 0px; }
 .personal_text .personal_social {
-  margin-top: 45px; }
+  margin-top: 5px; }
   .personal_text .personal_social li {
     display: inline-block;
     margin-right: 7px; }
