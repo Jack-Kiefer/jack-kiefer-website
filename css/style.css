@@ -44,6 +44,120 @@ Table of Content:
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.resume-link {
+  display: inline-flex; /* Flexbox for better alignment of text and icon */
+  align-items: center; /* Vertically centers the icon with the text */
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #3498db; /* Replace with your primary color */
+  color: #ffffff; /* Replace with white color */
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #3498db; /* Replace with your primary color */
+  border-radius: 50px; /* Rounded button effect */
+  transition: all 0.3s ease-in-out;
+}
+
+.resume-link:hover {
+  background-color: #2c3e50; /* Replace with your secondary color */
+  color: #ffffff; /* Ensure text and icon color remain white */
+  border-color: #2c3e50; /* Replace with your secondary color */
+}
+
+.resume-link:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Focus shadow for accessibility */
+}
+
+.resume-link i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 18px; /* Icon size adjustment */
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* Centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 900px; /* Maximum width */
+  height: 90vh; /* Adjust the height to take up 80% of the viewport height */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: relative; /* Position for close button */
+}
+
+.close {
+  color: #535252; /* Set to white or a bright color for contrast */
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  font-size: 70px; /* Increase size for better visibility */
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Optional: subtle shadow to enhance contrast */
+}
+
+.close:hover,
+.close:focus {
+  color: #ff6347; /* Change to a bright color on hover (e.g., Tomato color) */
+  transform: scale(1.2); /* Slightly enlarge on hover for emphasis */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.9); /* Make shadow more prominent on hover */
+}
+
+
+@media (max-width: 600px) {
+  .modal-content {
+      width: 95%; /* Use more of the width on smaller screens */
+      height: 90vh; /* Use more of the height on smaller screens */
+  }
+}
+
+
+.resume-iframe {
+  width: 100%; /* Full width of the modal content */
+  height: 100%; /* Full height of the modal content */
+  border: none; /* Remove border for a cleaner look */
+}
+
+
+.preview-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 12px 30px;
+  background-color: #3498db; /* Example primary color */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #3498db;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.preview-link:hover {
+  background-color: #2c3e50; /* Example secondary color */
+  border-color: #2c3e50;
+}
+
 .list {
   list-style: none;
   margin: 0px;
@@ -70,7 +184,7 @@ Table of Content:
 .timeline-item {
   position: relative;
   width: 50%;
-  padding: 20px 40px;
+  padding: 5px 10px;
   box-sizing: border-box;
 }
 
@@ -87,8 +201,8 @@ Table of Content:
 .timeline-icon {
   position: absolute;
   top: 50%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background: #fff;
   border: 3px solid #ddd;
   border-radius: 50%;
@@ -101,8 +215,8 @@ Table of Content:
 }
 
 .timeline-img {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border-radius: 10%;
   object-fit: contain;
   z-index: 5;
@@ -121,12 +235,12 @@ Table of Content:
 
 /* Move the timeline-icon to align with content */
 .timeline-item:nth-child(even) .timeline-icon {
-  right: 500px; /* Move icon to the left of the even items */
+  right: 490px; /* Move icon to the left of the even items */
   margin-right: 20px;
 }
 
 .timeline-item:nth-child(odd) .timeline-icon {
-  left: 500px; /* Move icon to the right of the odd items */
+  left: 490px; /* Move icon to the right of the odd items */
   margin-left: 20px;
 }
 
