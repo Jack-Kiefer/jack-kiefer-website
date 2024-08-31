@@ -44,6 +44,19 @@ Table of Content:
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.timeline-link {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px dotted #007BFF; /* Adds a subtle dotted underline */
+}
+
+.timeline-link:hover {
+  color: #007BFF; /* Changes text color on hover */
+  border-bottom: 1px solid #007BFF; /* Changes underline to solid on hover */
+}
+
+
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -493,10 +506,10 @@ button:focus {
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
       .header_area .navbar .nav .nav-item .nav-link {
-        font: 500 12px/120px "Roboto", sans-serif;
+        font: 500 24px/120px "Roboto", sans-serif;
         text-transform: uppercase;
         color: #fff;
-        padding: 0px;
+        padding: 20px;
         display: inline-block; }
         .header_area .navbar .nav .nav-item .nav-link:after {
           display: none; }
