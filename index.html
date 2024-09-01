@@ -42,9 +42,8 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="#experience">Work Experience</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="index.html#experience">Work Experience</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Projects</a></li> 
                         </ul>
                     </div> 
                 </div>
@@ -64,7 +63,7 @@
                         </div>
                         <div class="media-body">
                             <div class="personal_text">
-                                <h6>Hello Everybody, I am</h6>
+                                <h6>Hello Everybody, I'm</h6>
                                 <h3>Jack Kiefer</h3>
                                 <h4>Software Engineer, Data Scientist, and Game Developer</h4>
                                 <p>I am passionate about combining different concepts and technologies to solve complex problems. Whether it's designing the right API to ensure seamless interaction between users and the backend, choosing the right features that enhance the accuracy of machine learning algorithms, or strategically selecting the best cards for a Magic: The Gathering deck to maximize win rates, I am driven by the process of finding innovative solutions to new and interesting problems.</p>
@@ -85,13 +84,14 @@
     </section>
 <!--================End Home Banner Area =================-->
 
-    <!-- Resume Preview Modal -->
     <div id="resumePreviewModal" class="modal">
-        <div class="modal-content">
+        <div id="modalContent" class="modal-content">
             <span class="close" onclick="closeResumePreview()">&times;</span>
             <iframe src="Kiefer_Jack_Resume.pdf" frameborder="0" style="width: 100%; height: 500%;"></iframe>
         </div>
     </div>
+    
+
 
 
     <!--================Welcome Area =================-->
@@ -404,6 +404,14 @@
 				}, 500);
 			});
 		});
+        document.addEventListener('click', function(event) {
+            var modal = document.getElementById('resumePreviewModal');
+            var modalContent = document.getElementById('modalContent');
+            if (event.target === modal) {
+                closeResumePreview();
+            }
+        });
+
         function openResumePreview() {
         document.getElementById('resumePreviewModal').style.display = 'block';
         }
@@ -411,6 +419,7 @@
         function closeResumePreview() {
             document.getElementById('resumePreviewModal').style.display = 'none';
         }
+
 	</script>
 	
 </body>
