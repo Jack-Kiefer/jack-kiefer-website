@@ -44,6 +44,12 @@ Table of Content:
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+/* Prevent scrolling */
+.no-scroll {
+  overflow: hidden;
+}
+
+
 .timeline-link {
   text-decoration: none;
   color: inherit;
@@ -268,7 +274,7 @@ Table of Content:
   margin-top: 20px; /* Increased top margin */
   margin-bottom: 20px; /* Optional: Add bottom margin */
   padding: 12px 30px;
-  background-color: #3498db; /* Example primary color */
+  background-color: #0069d9; /* Example primary color */
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
@@ -277,12 +283,15 @@ Table of Content:
   border: 2px solid #3498db;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
+  position: relative; /* Allows z-index to be applied */
+  z-index: 10; /* Adjust z-index to ensure it appears above other content */
 }
 
-.preview-link:hover {
-  background-color: #2c3e50; /* Example secondary color */
-  border-color: #2c3e50;
+.btn.preview-link:hover {
+  background-image: linear-gradient(to right, #88f3ff, #766dff); /* Gradient on hover */
+  border-color: #88f3ff; /* Match hover state with gradient */
 }
+
 
 
 .list {
@@ -335,7 +344,6 @@ Table of Content:
   border-radius: 50%;
   box-shadow: 0 0 0 4px #f4f4f4;
   transform: translateY(-50%); /* Only translate vertically */
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,7 +354,6 @@ Table of Content:
   height: 100px;
   border-radius: 10%;
   object-fit: contain;
-  z-index: 5;
 }
 
 .timeline-content {
@@ -357,7 +364,6 @@ Table of Content:
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   margin: 20px 0;
-  z-index: 10;
 }
 
 /* Move the timeline-icon to align with content */
@@ -3114,7 +3120,7 @@ h6 {
     .personal_text .personal_social li a {
       line-height: 40px;
       width: 40px;
-      background: #e8e8e8;
+      background: #0069d9;
       border-radius: 5px;
       display: inline-block;
       text-align: center;

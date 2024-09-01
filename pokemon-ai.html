@@ -78,20 +78,18 @@
             <div class="banner_inner">
                 <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Pokemon AI Project Overview</h3>
                 <div class="project_content">
-                    <iframe class="project_video" width="800" height="450" src="https://www.youtube.com/embed/FlsZku3VRe0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="project_video" width="800" height="450" src="https://www.youtube.com/embed/FlsZku3VRe0?start=7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_text">
                         <h4>Introduction</h4>
-                        <p>This project showcases an AI that plays Pokémon Platinum autonomously by analyzing in-game visuals and making strategic decisions. It operates by capturing two images: one before and one after a move, and subtracting them to detect changes. A Convolutional Neural Network (CNN) classifies these changes to identify movement or interactions.</p>
-                        <p>The AI maps out the game environment dynamically, placing walls on the map where it detects obstacles. To handle different game scenarios, it opens the game menu to check if it's in a cutscene or battle. This approach helps the AI differentiate between normal gameplay and events where normal movement isn’t possible.</p>
+                        <p>This project showcases an AI that plays Pokémon Platinum autonomously by analyzing in-game visuals to make decisions on how to navigate the world. It operates by capturing two images: one before and one after a move, and subtracting them to detect changes. A Convolutional Neural Network (CNN) classifies these changes to identify movement or interactions.</p>
+                        <p>The AI then maps out the game environment dynamically, placing walls on the map where it detects obstacles and spaces where no wall is detected. To handle cutscenes or battles, it opens the game menu to check if it is possible. Additionally the AI can handle warps in doorways and knows which maps connect to eachother so it can remember areas that aren't currenty visible</p>
 
                         <h4>Technology</h4>
                         <p>This project leverages several key technologies to build and train the AI model effectively:</p>
                         <ul>
                             <li><strong>Python:</strong> The primary programming language used for building the environment and implementing the AI logic.</li>
-                            <li><strong>TensorFlow:</strong> A deep learning framework used to implement and train the Convolutional Neural Networks (CNN).</li>
-                            <li><strong>OpenCV:</strong> A library used for image processing tasks, such as detecting changes between frames.</li>
-                            <li><strong>NumPy & Pandas:</strong> Libraries used for handling data processing and manipulation tasks during training.</li>
-                            <li><strong>Game APIs:</strong> Used to interact with the Pokémon game environment for real-time data capture and control.</li>
+                            <li><strong>TensorFlow:</strong> A deep learning framework used to implement and train the CNN to detect movement.</li>
+                            <li><strong>Pillow:</strong> A library used for taking screenshots.</li>
                         </ul>
 
                         <h4>Project Repository:</h4>

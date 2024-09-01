@@ -4,8 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <title>FeedCMU - Project Details</title>
+    <link rel="icon" href="img/gallery/profile.ico" type="image/png">
+    <title>Scrapyard Scramble - Project Details</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -33,11 +33,11 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            margin-bottom: 30px; /* Adds space below content */
         }
-        .project_image {
-            width: 600px; /* Adjust image size */
-            margin-right: 20px; /* Adds space between the image and text */
+        .project_video {
+            width: 800px; /* Increased width for larger video */
+            height: 450px; /* Increased height for larger video */
+            margin-right: 20px; /* Adds space between the video and text */
         }
         .project_text {
             flex: 2;
@@ -62,8 +62,8 @@
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
                             <li class="nav-item"><a class="nav-link" href="#about">About</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="#next-steps">Next Steps</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="#experience">Work Experience</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> 
                         </ul>
                     </div> 
                 </div>
@@ -73,51 +73,30 @@
     <!--================Header Menu Area =================-->
 
     <!--================Home Banner Area =================-->
-    <section class="home_banner_area">
-        <div class="container box_1620">
-            <div class="banner_inner">
-                <h3 class="project_title" style="font-size: 36px; font-weight: bold;">FeedCMU Project Overview</h3>
-                <div class="project_content">
-                    <img src="img/gallery/freefood.png" alt="FeedCMU Project Image" class="project_image"> <!-- Replace with actual image path -->
-                    <div class="project_text">
-                        <h4>Introduction</h4>
-                        <p>The FeedCMU project is a community-driven initiative designed to reduce food waste on the Carnegie Mellon University (CMU) campus. By connecting students with free leftover food from events, FeedCMU ensures that surplus food is utilized efficiently and reaches those who can benefit from it. This not only helps reduce waste but also supports the student community by providing easy access to free food resources.</p>
-                        <p>Through a user-friendly platform, FeedCMU alerts students about available food, enabling them to find and collect it before it goes to waste.</p>
+<section class="home_banner_area">
+    <div class="container box_1620">
+        <div class="banner_inner">
+            <h3 class="project_title" style="font-size: 36px; font-weight: bold;">FeedCMU Project Overview</h3>
+            <div class="project_content">
+                <img src="img/gallery/freefood.png" alt="FeedCMU Project Image" class="project_image"> <!-- Replace with actual image path -->
+                <div class="project_text">
+                    <h4>Introduction</h4>
+                    <p>Built during HackCMU 2022, FeedCMU is a community-focused project designed to minimize food waste on the CMU campus. The idea is simple: connect students with free leftover food from various campus events, making sure surplus food goes to good use. It's a win-win situation—less food waste and more students getting easy access to free meals. Our user-friendly platform sends out alerts to let students know when and where free food is available, helping them grab it before it's gone to waste</p>
 
-                        <h4>Technology Stack</h4>
-                        <p>The FeedCMU platform is built using the following technologies:</p>
-                        <ul>
-                            <li><strong>Frontend:</strong> React.js for building a dynamic and responsive user interface.</li>
-                            <li><strong>Backend:</strong> Node.js and Express.js for server-side logic and API management.</li>
-                            <li><strong>Mapping:</strong> Google Maps API for displaying food locations and navigating users efficiently.</li>
-                            <li><strong>Database:</strong> MongoDB for storing information about food availability and user preferences.</li>
-                        </ul>
-
-                        <h4>Challenges and Learnings</h4>
-                        <ul>
-                            <li>Effectively updating the map display using React hooks to ensure real-time updates.</li>
-                            <li>Configuring the Google Maps API for accurate indoor mapping and navigating specific locations.</li>
-                            <li>Implementing user-friendly features that provide instant feedback and clear navigation paths.</li>
-                            <li>Handling data efficiently to keep the application responsive and ensure quick load times.</li>
-                            <li>Managing teamwork and task distribution effectively to meet project deadlines.</li>
-                        </ul>
-
-                        <h4>Next Steps</h4>
-                        <ol>
-                            <li>Implement a system to automatically delete food listings that are no longer available.</li>
-                            <li>Introduce user authentication to restrict the platform to CMU students and faculty.</li>
-                            <li>Develop a detailed indoor map that guides users directly to the specific rooms with food.</li>
-                            <li>Explore opportunities to expand the FeedCMU initiative to other university campuses.</li>
-                        </ol>
-
-                        <h4>Project Repository:</h4>
-                        <p>For more details and to contribute to the project, visit the project repository on <a href="https://github.com/Your-GitHub-Username/feedcmu" target="_blank">GitHub</a>.</p> <!-- Replace with your actual GitHub link -->
-                    </div>
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li><strong>Frontend:</strong> React.js for building a responsive and dynamic user interface.</li>
+                        <li><strong>Backend:</strong> Node.js and Express.js for handling server-side logic and API management.</li>
+                        <li><strong>Mapping:</strong> Google Maps API to show food locations and help users navigate effortlessly.</li>
+                        <li><strong>Database:</strong> MongoDB for managing data about food availability and user preferences.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-    <!--================End Home Banner Area =================-->
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+
     
     <!--================Footer Area =================-->
     <footer class="footer_area p_120">

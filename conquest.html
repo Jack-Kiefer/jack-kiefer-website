@@ -74,48 +74,38 @@
     <!--================Header Menu Area =================-->
 
     <!--================Home Banner Area =================-->
-    <section class="home_banner_area">
-        <div class="container box_1620">
-            <div class="banner_inner">
-                <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Hearthstone AI Project Overview</h3>
-                <div class="project_content">
-                    <img src="img/gallery/hearthstone_ai_img.png" alt="Hearthstone AI" class="project_image">
-                    <div class="project_text">
-                        <h4>Introduction</h4>
-                        <p>Hearthstone AI is a project that aims to simulate Hearthstone deck matchups and determine optimal deck strategies using reinforcement learning techniques. The project leverages Python-based simulations to evaluate various deck combinations and provides insights into competitive deck building.</p>
+<section class="home_banner_area">
+    <div class="container box_1620">
+        <div class="banner_inner">
+            <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Conquest Calculator Project Overview</h3>
+            <div class="project_content">
+                <img src="img/conquest.jpg" alt="Hearthstone AI" class="project_image">
+                <div class="project_text">
+                    <h4>Introduction</h4>
+                    <p>The Conquest Calculator is a project that stems from my time playing on the CMU collegiate Hearthstone team. I aimed to create a calculator that would select the best lineup of 4 decks, given all the win rates of each deck against each other. This calculator uses a combination of techniques to simulate a metagame and determine the best lineup to counter it. It does this by identifying which top n lineups have the best matchups against the field and then choosing the optimal lineup to combat those decks.</p>
 
-                        <h4>Key Features</h4>
-                        <ul>
-                            <li>Simulates matchups between different Hearthstone decks.</li>
-                            <li>Uses a zero-sum game approach to determine win rates.</li>
-                            <li>Incorporates memoization for efficient computation of game values.</li>
-                            <li>Customizable parameters for number of top lineups to evaluate.</li>
-                            <li>Command-line flags to toggle verbosity and specify top lineups for runoff.</li>
-                            <li>Identifies the best deck and lineup against a given meta field.</li>
-                        </ul>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Simulates a conquest match by selecting each lineup's optimal bans and having each team pick a random deck from their available options each game.</li>
+                        <li>Incorporates dynamic programming to improve efficiency by memoizing individual match win rates.</li>
+                        <li>Customizable parameters for the number of top lineups to evaluate.</li>
+                    </ul>
 
-                        <h4>Usage</h4>
-                        <ol>
-                            <li>Setup the Environment: Ensure all required libraries are installed using `pip install -r requirements.txt`.</li>
-                            <li>Run the script: Use `python hearthstone_ai.py --verbose --top_n_runoff 10` to start the evaluation with custom parameters.</li>
-                            <li>Analyze Results: The script outputs the top lineups and the best lineup against the field based on the chosen parameters.</li>
-                        </ol>
+                    <h4>Future Improvements</h4>
+                    <ul>
+                        <li>Implement a mixed strategy for bans to determine the value of the game using a Nash Equilibrium.</li>
+                        <li>Improve metagame simulation by allowing the top lineups to have varying metagame shares rather than a uniform share.</li>
+                    </ul>
 
-                        <h4>Future Improvements</h4>
-                        <ul>
-                            <li>Enhance AI capabilities to predict metagame shifts and adapt lineups dynamically.</li>
-                            <li>Incorporate additional Hearthstone cards and deck types for broader analysis.</li>
-                            <li>Develop a graphical interface to visualize deck performance and matchup outcomes.</li>
-                        </ul>
-
-                        <h4>Project Repository</h4>
-                        <p>For more detail and to contribute to the project, visit the project repository on <a href="https://github.com/Your-GitHub-Username/hearthstone-ai" target="_blank">GitHub</a>.</p> <!-- Replace with your actual GitHub link -->
-                    </div>
+                    <h4>Project Repository</h4>
+                    <p>For more details and to contribute to the project, visit the project repository on <a href="https://github.com/Jack-Kiefer/Hearthstone-Conquest-Calculator" target="_blank">GitHub</a>.</p> <!-- Replace with your actual GitHub link -->
                 </div>
             </div>
         </div>
-    </section>
-    <!--================End Home Banner Area =================-->
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+
     
     <!--================Footer Area =================-->
     <footer class="footer_area p_120">
