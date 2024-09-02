@@ -172,6 +172,20 @@ Table of Content:
     margin-top: 8px; /* Reduced top margin */
 }
 
+.profile-img {
+  width: 100%; /* Make the image take up 100% of the container width */
+  max-width: 680px; /* Limit the maximum width */
+  height: auto; /* Maintain the aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensures the image is a block-level element */
+}
+
+@media (max-width: 576px) {
+  .profile-img {
+      max-width: 80%; /* Adjust the image size for very small screens */
+  }
+}
+
 
 
 
@@ -297,7 +311,8 @@ Table of Content:
 .list {
   list-style: none;
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+}
 
 /* General timeline styling */
 .timeline {
@@ -343,7 +358,7 @@ Table of Content:
   border: 3px solid #ddd;
   border-radius: 50%;
   box-shadow: 0 0 0 4px #f4f4f4;
-  transform: translateY(-50%); /* Only translate vertically */
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,10 +372,10 @@ Table of Content:
 }
 
 .timeline-content {
-  background: #007bff; /* Blue background */
+  background: #007bff;
   color: #fff;
   padding: 20px;
-  border-radius: px;
+  border-radius: 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   margin: 20px 0;
@@ -368,12 +383,12 @@ Table of Content:
 
 /* Move the timeline-icon to align with content */
 .timeline-item:nth-child(even) .timeline-icon {
-  right: 490px; /* Move icon to the left of the even items */
+  right: 490px;
   margin-right: 20px;
 }
 
 .timeline-item:nth-child(odd) .timeline-icon {
-  left: 490px; /* Move icon to the right of the odd items */
+  left: 490px;
   margin-left: 20px;
 }
 
@@ -385,34 +400,60 @@ Table of Content:
   margin-right: 80px;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for mobile only */
 @media (max-width: 768px) {
+  .timeline {
+    padding: 0;
+  }
+
+  .timeline::before {
+    left: 10%; /* Line on the left side */
+    transform: translateX(0); /* No translation needed */
+  }
+
   .timeline-item {
-      width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+    left: 0; /* Reset the left position */
+    margin-left: 0; /* No margin to align items centrally */
+    display: flex;
+    align-items: flex-start; /* Align items to start (top-left) */
+    margin-bottom: 10px; /* Space between items */
+  }
+
+  .timeline-icon {
+    left: 0; /* Align icon to the left */
+    transform: translate(0, -50%); /* Align icon vertically */
+    margin-right: 20px; /* Space between icon and content */
+  }
+
+  .timeline-content {
+    text-align: left;
+    margin-left: 0; /* No additional margin */
+    margin-right: auto; /* Ensures the box doesn't move right */
+    width: calc(100% - 80px); /* Account for icon space */
+    max-width: 70%; /* Constrain width for readability */
   }
 
   .timeline-item:nth-child(even),
   .timeline-item:nth-child(odd) {
-      left: 0;
-      text-align: left;
+    left: 0;
+    text-align: left;
   }
 
-  .timeline::before {
-      left: 20px;
+  .timeline-item:nth-child(even) .timeline-icon,
+  .timeline-item:nth-child(odd) .timeline-icon {
+    left: 10px; /* Align icon with the line */
   }
 
-  .timeline-icon {
-      left: 20px; /* Align to the left on smaller screens */
-      transform: translateY(-50%);
-  }
-
-  .timeline-content {
-      text-align: left;
-      margin-left: 60px;
+  .timeline-item:nth-child(even) .timeline-content,
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 25%; /* Align content next to the icon */
+    margin-right: 0;
   }
 }
+
 
 
 
@@ -505,6 +546,7 @@ button:focus {
   z-index: 99;
   transition: background 0.4s, all 0.3s linear;
 }
+
 .header_area .navbar {
   background: transparent;
   padding: 0px;
@@ -513,15 +555,34 @@ button:focus {
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Centers the content vertically */
+  flex-wrap: wrap; /* Ensures items wrap when needed */
 }
-.header_area .navbar .navbar-nav {
+
+.header_area .navbar .nav {
   display: flex;
-  justify-content: center; /* Centers the nav items within the navbar */
-  margin: 0 auto; /* Centers the nav within the parent container */
+  justify-content: center; /* Centers the nav items */
+  align-items: center; /* Centers vertically */
+  flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+  width: 100%; /* Takes full width for better alignment */
 }
-.header_area .navbar .nav .nav-item {
-  margin: 0 15px; /* Adds equal spacing on both sides */
+
+.header_area .navbar .nav-item {
+  margin: 5px 15px; /* Adds spacing for mobile and desktop */
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .header_area .navbar .navbar-toggler {
+      margin-left: auto; /* Pushes the toggle button to the right */
+  }
+  .header_area .navbar .nav-item {
+      margin: 5px 10px; /* Reduce margin for smaller screens */
+  }
+  .header_area .navbar-collapse {
+      justify-content: center; /* Center the nav items in the collapsed view */
+  }
+}
+
 .header_area .navbar .nav .nav-item .nav-link {
   font: 500 24px/120px "Roboto", sans-serif;
   text-transform: uppercase;
