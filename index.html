@@ -303,7 +303,7 @@
                         </div>
                         <div class="g_item_text">
                             <h4><a href="dungeon-duels.html">Dungeon Duels</a></h4>
-                            <p>An AI-driven RPG game featuring diverse AI types and characters. Manage a team, strategize in combat, and explore a rich world filled with challenges and opportunities.</p>
+                            <p>A multiplayer autobattler where players assemble teams of AI-controlled characters to capture the enemy's flag.</p>
                         </div>
                     </div>
                 </div>
@@ -413,8 +413,17 @@
         });
 
         function openResumePreview() {
-        document.getElementById('resumePreviewModal').style.display = 'block';
+            // Scroll down the page by a specified number of pixels (e.g., 200 pixels)
+            window.scrollBy({
+                top: 200, // Adjust the value (in pixels) as needed to scroll the page down
+                behavior: 'smooth' // Ensures smooth scrolling
+            });
+
+            // Open the modal after scrolling
+            document.getElementById('resumePreviewModal').style.display = 'block';
         }
+
+
 
         function closeResumePreview() {
             document.getElementById('resumePreviewModal').style.display = 'none';
