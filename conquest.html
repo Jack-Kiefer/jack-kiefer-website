@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="img/gallery/profile.ico" type="image/png">
-    <title>Hearthstone AI - Project Details</title>
+    <title>Conquest Calculator - Project Details</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -24,29 +24,44 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .project_title {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         .project_content {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            margin-bottom: 30px; /* Adds space below content */
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .project_image {
             width: 100%;
-            max-width: 600px;
-            margin-right: 20px; /* Adds space between the image and text */
+            max-width: 600px; /* Default max width for larger screens */
+            height: auto;
+            margin-bottom: 20px;
         }
         .project_text {
-            flex: 2;
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        /* Media query for smaller image on larger screens */
+        @media (min-width: 768px) {
+            .project_image {
+                max-width: 400px; /* Adjust this value to make the image smaller on larger screens */
+            }
         }
     </style>
 </head>
 <body>
-    
     <!--================Header Menu Area =================-->
     <header class="header_area">
         <div class="main_menu">
@@ -73,85 +88,38 @@
     <!--================Header Menu Area =================-->
 
     <!--================Home Banner Area =================-->
-<section class="home_banner_area">
-    <div class="container box_1620">
-        <div class="banner_inner">
-            <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Conquest Calculator Project Overview</h3>
-            <div class="project_content">
-                <img src="img/conquest.jpg" alt="Hearthstone AI" class="project_image">
-                <div class="project_text">
-                    <h4>Introduction</h4>
-                    <p>The Conquest Calculator is a project that stems from my time playing on the CMU collegiate Hearthstone team. I aimed to create a calculator that would select the best lineup of 4 decks, given all the win rates of each deck against each other. This calculator uses a combination of techniques to simulate a metagame and determine the best lineup to counter it. It does this by identifying which top n lineups have the best matchups against the field and then choosing the optimal lineup to combat those decks.</p>
+    <section class="home_banner_area">
+        <div class="container box_1620">
+            <div class="banner_inner">
+                <h3 class="project_title">Conquest Calculator Project Overview</h3>
+                <div class="project_content">
+                    <img src="img/conquest.jpg" alt="Conquest Calculator" class="project_image">
+                    <div class="project_text">
+                        <h4>Introduction</h4>
+                        <p>The Conquest Calculator is a project that stems from my time playing on the CMU collegiate Hearthstone team. I aimed to create a calculator that would select the best lineup of 4 decks, given all the win rates of each deck against each other. This calculator uses a combination of techniques to simulate a metagame and determine the best lineup to counter it. It does this by identifying which top n lineups have the best matchups against the field and then choosing the optimal lineup to combat those decks.</p>
 
-                    <h4>Key Features</h4>
-                    <ul>
-                        <li>Simulates a conquest match by selecting each lineup's optimal bans and having each team pick a random deck from their available options each game.</li>
-                        <li>Incorporates dynamic programming to improve efficiency by memoizing individual match win rates.</li>
-                        <li>Customizable parameters for the number of top lineups to evaluate.</li>
-                    </ul>
-
-                    <h4>Future Improvements</h4>
-                    <ul>
-                        <li>Implement a mixed strategy for bans to determine the value of the game using a Nash Equilibrium.</li>
-                        <li>Improve metagame simulation by allowing the top lineups to have varying metagame shares rather than a uniform share.</li>
-                    </ul>
-
-                    <h4>Project Repository</h4>
-                    <p>For more details and to contribute to the project, visit the project repository on <a href="https://github.com/Jack-Kiefer/Hearthstone-Conquest-Calculator" target="_blank">GitHub</a>.</p> <!-- Replace with your actual GitHub link -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================End Home Banner Area =================-->
-
-    
-    <!--================Footer Area =================-->
-    <footer class="footer_area p_120">
-        <div class="container">
-            <div class="row footer_inner">
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget ab_widget">
-                        <div class="f_title">
-                            <h3>About Me</h3>
-                        </div>
-                        <p>I am a game developer and software engineer, passionate about creating intelligent systems that enhance gameplay experiences. I enjoy exploring the intersection of artificial intelligence and interactive entertainment.</p>
-                    </aside>
-                </div>
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget news_widget">
-                        <div class="f_title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>Stay updated with my latest projects and insights in game development and AI.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>        
-                                </div>                
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-lg-2">
-                    <aside class="f_widget social_widget">
-                        <div class="f_title">
-                            <h3>Follow Me</h3>
-                        </div>
-                        <p>Let us connect on social media</p>
-                        <ul class="list">
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li>Simulates a conquest match by selecting each lineup's optimal bans and having each team pick a random deck from their available options each game.</li>
+                            <li>Incorporates dynamic programming to improve efficiency by memoizing individual match win rates.</li>
+                            <li>Customizable parameters for the number of top lineups to evaluate.</li>
                         </ul>
-                    </aside>
+
+                        <h4>Future Improvements</h4>
+                        <ul>
+                            <li>Implement a mixed strategy for bans to determine the value of the game using a Nash Equilibrium.</li>
+                            <li>Improve metagame simulation by allowing the top lineups to have varying metagame shares rather than a uniform share.</li>
+                        </ul>
+
+                        <h4>Project Repository</h4>
+                        <p>For more details and to contribute to the project, visit the project repository on <a href="https://github.com/Jack-Kiefer/Hearthstone-Conquest-Calculator" target="_blank">GitHub</a>.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
+    </section>
+    <!--================End Home Banner Area =================-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>

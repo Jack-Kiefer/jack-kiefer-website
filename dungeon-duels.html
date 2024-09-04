@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="img/gallery/profile.ico" type="image/png">
-    <title>Scrapyard Scramble - Project Details</title>
+    <title>Dungeon Duels - Project Details</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -24,23 +24,47 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .project_title {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         .project_content {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .project_video {
-            width: 800px; /* Increased width for larger video */
-            height: 450px; /* Increased height for larger video */
-            margin-right: 20px; /* Adds space between the video and text */
+            width: 100%;
+            max-width: 800px; /* Max width for larger screens */
+            height: auto;
+            aspect-ratio: 16/9; /* Keeps the video aspect ratio */
+            margin-bottom: 20px;
         }
         .project_text {
-            flex: 2;
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .project_title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .project_video {
+                max-width: 100%;
+            }
+            .project_text {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -75,91 +99,40 @@
     <section class="home_banner_area">
         <div class="container box_1620">
             <div class="banner_inner">
-                <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Dungeon Duels Project Overview</h3>
+                <h3 class="project_title">Dungeon Duels Project Overview</h3>
                 <div class="project_content">
-                    <iframe class="project_video" width="800" height="450" src="https://www.youtube.com/embed/2BwqRvqHr8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="project_video" src="https://www.youtube.com/embed/2BwqRvqHr8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_text">
                         <h4>Introduction</h4>
-                        <p>Dungeon Duels is a dynamic RPG game where players assemble a team of characters, each with unique abilities, to explore dungeons, fight enemies, and collect loot. The game features a range of AI types, including Medics, Assassins, Hunters, and more, each with distinct behavior patterns that enhance the strategic depth of the game.</p>
-                        <p>Players start with a single character and can expand their roster to up to six, each contributing different skills and stats. The game emphasizes tactical decision-making, resource management, and real-time combat, making each dungeon run a unique challenge.</p>
+                        <p>Dungeon Duels is a strategic multiplayer game where players assemble a team of characters with different stats and abilities, each assigned a specific AI to control their behavior. At the start of the game, players choose the placement of their characters and flag, and the teams automatically compete to capture the opponent’s flag.</p>
+                        <p>Players can choose from various AI types for each character. These include:</p>
+                        <ul>
+                            <li><strong>Sentry:</strong> Defends the flag by staying in one place.</li>
+                            <li><strong>Flag Capture:</strong> Rushes directly to the opponent's flag at all costs.</li>
+                            <li><strong>Hunter:</strong> Roams the area searching for opponents to attack.</li>
+                            <li><strong>Rogue:</strong> Collects loot around the dungeon and backstabs enemies when detected.</li>
+                        </ul>
 
                         <h4>Key Features</h4>
                         <ul>
-                            <li><strong>Diverse AI Characters:</strong> Each AI type has a specific behavior, such as Medic, Assassin, Hunter, and Looter, allowing players to build varied strategies.</li>
-                            <li><strong>Unique Items and Skills:</strong> Players can equip characters with items like bows, spears, and wands, and unlock skills such as Stealth, Enrage, and Necromancy.</li>
-                            <li><strong>Strategic Combat:</strong> Combat is driven by AI behavior and player tactics, requiring thoughtful planning and adaptation to enemy moves.</li>
-                            <li><strong>Resource Management:</strong> Collecting and managing items, orbs, and gold is crucial for upgrading characters and improving their abilities.</li>
+                            <li><strong>Line-of-Sight Detection:</strong> Utilizes raycasting for detecting visible objects within the environment.</li>
+                            <li><strong>Pathfinding:</strong> Integrated with NavMesh Pro for dynamic pathfinding around the dungeon.</li>
+                            <li><strong>Memory System:</strong> Characters have memory of enemy positions, enabling strategic decision-making even when enemies are not in view.</li>
                         </ul>
 
-                        <h4>Game Mechanics</h4>
+                        <h4>Technology</h4>
+                        <p>This project leverages several technologies to enhance gameplay:</p>
                         <ul>
-                            <li><strong>AI Roles:</strong> Medics heal allies, Assassins target from behind, Hunters keep distance, and Looters prioritize resource collection.</li>
-                            <li><strong>Character Upgrades:</strong> Purchase new characters and items from the in-game shop using collected resources.</li>
-                            <li><strong>Team Customization:</strong> Mix and match characters to form a balanced team that can handle various dungeon challenges.</li>
-                            <li><strong>Power-Up Orbs:</strong> Special orbs scattered across dungeons can temporarily boost character stats or activate powerful skills.</li>
-                        </ul>
-
-                        <h4>Items and Skills</h4>
-                        <ul>
-                            <li><strong>Items:</strong> Bows, Daggers, Healing Wands, Health Packs, etc., each with specific effects.</li>
-                            <li><strong>Skills:</strong> Incite enemies, boost damage, recruit MOBs, and more, adding layers of strategy to the gameplay.</li>
-                        </ul>
-
-                        <h4>Project Repository</h4>
-                        <p>For more detail and to contribute to the project, visit the project repository on <a href="https://github.com/Your-GitHub-Username/dungeon-duels" target="_blank">GitHub</a>.</p> <!-- Replace with your actual GitHub link -->
-                    </div>
+                            <li><strong>Unity:</strong> The main game engine used for creating and rendering the dungeon environment.</li>
+                            <li><strong>NavMesh Pro:</strong> Provides advanced pathfinding and navigation for character movement.</li>
+                            <li><strong>Raycasting:</strong> Used for implementing line-of-sight detection.</li>
+                        </ul></div>
                 </div>
             </div>
         </div>
     </section>
     <!--================End Home Banner Area =================-->
-    
-    <!--================Footer Area =================-->
-    <footer class="footer_area p_120">
-        <div class="container">
-            <div class="row footer_inner">
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget ab_widget">
-                        <div class="f_title">
-                            <h3>About Me</h3>
-                        </div>
-                        <p>I am a game developer and software engineer, always eager to learn and tackle new challenges. My goal is to create engaging and innovative digital experiences.</p>
-                    </aside>
-                </div>
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget news_widget">
-                        <div class="f_title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>Stay updated with my latest projects and articles.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>        
-                                </div>                
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-lg-2">
-                    <aside class="f_widget social_widget">
-                        <div class="f_title">
-                            <h3>Follow Me</h3>
-                        </div>
-                        <p>Let us be social</p>
-                        <ul class="list">
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>

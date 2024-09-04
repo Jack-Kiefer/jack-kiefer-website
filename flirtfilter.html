@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="img/gallery/profile.ico" type="image/png">
-    <title>Scrapyard Scramble - Project Details</title>
+    <title>FlirtFilter - Project Details</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -24,23 +24,46 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .project_title {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         .project_content {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .project_video {
-            width: 800px; /* Increased width for larger video */
-            height: 450px; /* Increased height for larger video */
-            margin-right: 20px; /* Adds space between the video and text */
+        .project_image {
+            width: 100%;
+            max-width: 600px; /* Default max width for larger screens */
+            height: auto;
+            margin-bottom: 20px;
         }
         .project_text {
-            flex: 2;
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .project_title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .project_image {
+                max-width: 100%;
+            }
+            .project_text {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -72,79 +95,32 @@
     <!--================Header Menu Area =================-->
 
     <!--================Home Banner Area =================-->
-<section class="home_banner_area">
-    <div class="container box_1620">
-        <div class="banner_inner">
-            <h3 class="project_title" style="font-size: 36px; font-weight: bold;">FlirtFilter Project Overview</h3>
-            <div class="project_content">
-                <img src="img/gallery/flirt.png" alt="FlirtFilter Project Image" class="project_image"> <!-- Replace with actual image path -->
-                <div class="project_text">
-                    <h4>Introduction</h4>
-                    <p>FlirtFilter was developed as part of TartanHacks 2023 and is a playful messaging app designed to make conversations more flirtatious and engaging. By using the GPT-3 API, FlirtFilter transforms the messages sent through the app, making them flirtier and more fun as they are sent. It's an entertaining way to communicate, whether you're chatting with friends or sending sweet nothings to a romantic partner.</p>
+    <section class="home_banner_area">
+        <div class="container box_1620">
+            <div class="banner_inner">
+                <h3 class="project_title">FlirtFilter Project Overview</h3>
+                <div class="project_content">
+                    <img src="img/gallery/flirt.png" alt="FlirtFilter Project Image" class="project_image"> <!-- Replace with actual image path -->
+                    <div class="project_text">
+                        <h4>Introduction</h4>
+                        <p>FlirtFilter was developed as part of TartanHacks 2023 and is a playful messaging app designed to make conversations more flirtatious and engaging. By using the GPT-3 API, FlirtFilter transforms the messages sent through the app, making them flirtier and more fun as they are sent. It's an entertaining way to communicate, whether you're chatting with friends or sending sweet nothings to a romantic partner.</p>
 
-                    <h4>Technology Stack</h4>
-                    <p>FlirtFilter utilizes the following technologies to provide a seamless and intelligent messaging experience:</p>
-                    <ul>
-                        <li><strong>Frontend:</strong> React.js for creating dynamic, responsive user interfaces.</li>
-                        <li><strong>Backend:</strong> Node.js and Express.js for handling server-side operations and API integration.</li>
-                        <li><strong>AI Integration:</strong> OpenAI's GPT-3 API for natural language processing and message transformation.</li>
-                        <li><strong>Database:</strong> MongoDB for managing user data, including preferences and message history.</li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================End Home Banner Area =================-->
-
-    
-    <!--================Footer Area =================-->
-    <footer class="footer_area p_120">
-        <div class="container">
-            <div class="row footer_inner">
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget ab_widget">
-                        <div class="f_title">
-                            <h3>About Me</h3>
-                        </div>
-                        <p>I am a game developer and software engineer, always eager to learn and tackle new challenges. My goal is to create engaging and innovative digital experiences.</p>
-                    </aside>
-                </div>
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget news_widget">
-                        <div class="f_title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>Stay updated with my latest projects and articles.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>        
-                                </div>                
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-lg-2">
-                    <aside class="f_widget social_widget">
-                        <div class="f_title">
-                            <h3>Follow Me</h3>
-                        </div>
-                        <p>Let us be social</p>
-                        <ul class="list">
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        <h4>Technology Stack</h4>
+                        <p>FlirtFilter utilizes the following technologies to provide a seamless and intelligent messaging experience:</p>
+                        <ul>
+                            <li><strong>Frontend:</strong> React.js for creating dynamic, responsive user interfaces.</li>
+                            <li><strong>Backend:</strong> Node.js and Express.js for handling server-side operations and API integration.</li>
+                            <li><strong>AI Integration:</strong> OpenAI's GPT-3 API for natural language processing and message transformation.</li>
+                            <li><strong>Database:</strong> MongoDB for managing user data, including preferences and message history.</li>
                         </ul>
-                    </aside>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
+    </section>
+    <!--================End Home Banner Area =================-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>

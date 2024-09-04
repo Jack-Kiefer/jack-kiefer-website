@@ -24,23 +24,47 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .project_title {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         .project_content {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .project_video {
-            width: 800px; /* Increased width for larger video */
-            height: 450px; /* Increased height for larger video */
-            margin-right: 20px; /* Adds space between the video and text */
+            width: 100%;
+            max-width: 800px; /* Max width for larger screens */
+            height: auto;
+            aspect-ratio: 16/9; /* Keeps the video aspect ratio */
+            margin-bottom: 20px;
         }
         .project_text {
-            flex: 2;
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .project_title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .project_video {
+                max-width: 100%;
+            }
+            .project_text {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -72,80 +96,35 @@
     <!--================Header Menu Area =================-->
 
     <!--================Home Banner Area =================-->
-    <section class="home_banner_area">
-        <div class="container box_1620">
-            <div class="banner_inner">
-                <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Pokemon AI Project Overview</h3>
-                <div class="project_content">
-                    <iframe class="project_video" width="800" height="450" src="https://www.youtube.com/embed/FlsZku3VRe0?start=7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="project_text">
-                        <h4>Introduction</h4>
-                        <p>This project showcases an AI that plays Pokémon Platinum autonomously by analyzing in-game visuals to make decisions on how to navigate the world. It operates by capturing two images: one before and one after a move, and subtracting them to detect changes. A Convolutional Neural Network (CNN) classifies these changes to identify movement or interactions.</p>
-                        <p>The AI then maps out the game environment dynamically, placing walls on the map where it detects obstacles and spaces where no wall is detected. To handle cutscenes or battles, it opens the game menu to check if it is possible. Additionally the AI can handle warps in doorways and knows which maps connect to eachother so it can remember areas that aren't currenty visible</p>
+<section class="home_banner_area">
+    <div class="container box_1620">
+        <div class="banner_inner">
+            <h3 class="project_title">Pokémon AI Project Overview</h3>
+            <div class="project_content">
+                <iframe class="project_video" src="https://www.youtube.com/embed/FlsZku3VRe0?start=7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="project_text">
+                    <h4>Introduction</h4>
+                    <p>This project showcases an AI that autonomously plays Pokémon Platinum by analyzing in-game visuals to decide how to navigate the world. The AI operates by capturing two images: one before and one after a move, then subtracting them to detect changes. A Convolutional Neural Network (CNN) classifies these changes to identify movement or interactions.</p>
+                    <p>The AI dynamically maps out the game environment, placing walls on the map where it detects obstacles and marking spaces where no wall is detected. To handle cutscenes or battles, the AI opens the game menu to check if it is possible. Additionally, the AI can handle warps in doorways and knows which maps connect to each other, allowing it to remember areas that are not currently visible.</p>
 
-                        <h4>Technology</h4>
-                        <p>This project leverages several key technologies to build and train the AI model effectively:</p>
-                        <ul>
-                            <li><strong>Python:</strong> The primary programming language used for building the environment and implementing the AI logic.</li>
-                            <li><strong>TensorFlow:</strong> A deep learning framework used to implement and train the CNN to detect movement.</li>
-                            <li><strong>Pillow:</strong> A library used for taking screenshots.</li>
-                        </ul>
+                    <h4>Technology</h4>
+                    <p>This project utilizes several key technologies to build and train the AI model effectively:</p>
+                    <ul>
+                        <li><strong>Python:</strong> The primary programming language used for building the environment and implementing the AI logic.</li>
+                        <li><strong>TensorFlow:</strong> A deep learning framework used to implement and train the CNN to detect movement.</li>
+                        <li><strong>Pillow:</strong> A library used for taking screenshots.</li>
+                    </ul>
 
-                        <h4>Project Repository:</h4>
-                        <p>For more detail, visit the project repository on <a href="https://github.com/Jack-Kiefer/pokemon_ai" target="_blank">GitHub</a>.</p> <!-- Replace with your actual GitHub link -->
-                    </div>
+                    <h4>Project Repository:</h4>
+                    <p>For more details, visit the project repository on <a href="https://github.com/Jack-Kiefer/pokemon_ai" target="_blank">GitHub</a>.</p> <!-- Replace with your actual GitHub link -->
                 </div>
             </div>
         </div>
-    </section>
-    <!--================End Home Banner Area =================-->
-    
-    <!--================Footer Area =================-->
-    <footer class="footer_area p_120">
-        <div class="container">
-            <div class="row footer_inner">
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget ab_widget">
-                        <div class="f_title">
-                            <h3>About Me</h3>
-                        </div>
-                        <p>I am a game developer and software engineer, always eager to learn and tackle new challenges. My goal is to create engaging and innovative digital experiences.</p>
-                    </aside>
-                </div>
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget news_widget">
-                        <div class="f_title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>Stay updated with my latest projects and articles.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>        
-                                </div>                
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-lg-2">
-                    <aside class="f_widget social_widget">
-                        <div class="f_title">
-                            <h3>Follow Me</h3>
-                        </div>
-                        <p>Let us be social</p>
-                        <ul class="list">
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>

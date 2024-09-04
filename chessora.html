@@ -24,23 +24,47 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .project_title {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         .project_content {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .project_video {
-            width: 800px; /* Increased width for larger video */
-            height: 450px; /* Increased height for larger video */
-            margin-right: 20px; /* Adds space between the video and text */
+            width: 100%;
+            max-width: 800px; /* Max width for larger screens */
+            height: auto;
+            aspect-ratio: 16/9; /* Keeps the video aspect ratio */
+            margin-bottom: 20px;
         }
         .project_text {
-            flex: 2;
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .project_title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .project_video {
+                max-width: 100%;
+            }
+            .project_text {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -70,24 +94,25 @@
         </div>
     </header>
     <!--================Header Menu Area =================-->
+    
     <!--================Home Banner Area =================-->
 <section class="home_banner_area">
     <div class="container box_1620">
         <div class="banner_inner">
-            <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Chessora Project Overview</h3>
+            <h3 class="project_title">Chessora Project Overview</h3>
             <div class="project_content">
-                <iframe class="project_video" width="800" height="450" src="https://www.youtube.com/embed/FlY_NEFpZOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="project_video" src="https://www.youtube.com/embed/FlY_NEFpZOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="project_text">
                     <h4>Introduction</h4>
-                    <p>Chessora is a game I am currently developing that combines the strategic depth of traditional chess with the long-term team-building mechanics found in games like autobattlers. Built to start with the familiar base rules of chess, Chessora gradually introduces new pieces, bounties, and anthems in a shop interface that modify gameplay, providing a bridge between classic chess and more complex strategic experiences.</p>
-                    <p>The game features elements such as bounties, which reward players with gold for achieving specific goals, and anthems, which grant all pieces of the same type a unique ability. These additions encourage players to think creatively and adapt their strategies, making each match a unique challenge. The goal of Chessora is to make it easier for players who already know how to play chess to learn and enjoy the game while introducing a new layer of complexity that keeps the gameplay fresh and engaging.</p>
+                    <p>Chessora is a game that I am currently developing that combines the strategic depth of traditional chess with the long-term team-building mechanics found in games like autobattlers. Starting with the familiar base rules of chess, Chessora gradually introduces new pieces, bounties, and anthems through a shop interface, bridging the gap between classic chess and more complex strategic experiences.</p>
+                    <p>The game features elements such as bounties, which reward players with gold for achieving specific goals, and anthems, which grant all pieces of the same type unique abilities. These additions encourage players to think creatively and adapt their strategies, making each match a unique challenge. Chessora aims to make it easier for players familiar with chess to learn and enjoy the game, while introducing a new layer of complexity that keeps gameplay fresh and engaging.</p>
 
                     <h4>Technology</h4>
                     <p>This project leverages several key technologies to build and enhance the gameplay experience:</p>
                     <ul>
-                        <li><strong>Unity:</strong> The primary game engine used for creating the game, offering powerful tools for rendering and game development.</li>
-                        <li><strong>C#:</strong> The scripting language used for implementing game logic, including piece movements, game rules, and AI behavior.</li>
-                        <li><strong>Unity Transport:</strong> A networking framework within Unity that facilitates real-time communication between players, enabling smooth and responsive online gameplay experiences.</li>
+                        <li><strong>Unity:</strong> The primary game engine used for creating the game, providing powerful tools for rendering and game development.</li>
+                        <li><strong>C#:</strong> The scripting language used to implement game logic, including piece movements, game rules, and AI behavior.</li>
+                        <li><strong>Unity Transport:</strong> A networking framework within Unity that facilitates real-time communication between players, enabling smooth and responsive online gameplay.</li>
                     </ul>
                 </div>
             </div>
@@ -97,54 +122,6 @@
 <!--================End Home Banner Area =================-->
 
 
-
-    
-    <!--================Footer Area =================-->
-    <footer class="footer_area p_120">
-        <div class="container">
-            <div class="row footer_inner">
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget ab_widget">
-                        <div class="f_title">
-                            <h3>About Me</h3>
-                        </div>
-                        <p>I am a game developer and software engineer, always eager to learn and tackle new challenges. My goal is to create engaging and innovative digital experiences.</p>
-                    </aside>
-                </div>
-                <div class="col-lg-5 col-sm.6">
-                    <aside class="f_widget news_widget">
-                        <div class="f_title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>Stay updated with my latest projects and articles.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>        
-                                </div>                
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-lg-2">
-                    <aside class="f_widget social_widget">
-                        <div class="f_title">
-                            <h3>Follow Me</h3>
-                        </div>
-                        <p>Let us be social</p>
-                        <ul class="list">
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>

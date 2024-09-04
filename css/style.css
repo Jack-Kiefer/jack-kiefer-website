@@ -442,9 +442,11 @@ Table of Content:
     text-align: left;
   }
 
-  .timeline-item:nth-child(even) .timeline-icon,
+  .timeline-item:nth-child(even) .timeline-icon{
+    left: -10px; /* Align icon with the line */
+  }
   .timeline-item:nth-child(odd) .timeline-icon {
-    left: 10px; /* Align icon with the line */
+    left: -30px; /* Align icon with the line */
   }
 
   .timeline-item:nth-child(even) .timeline-content,

@@ -24,23 +24,44 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .project_title {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         .project_content {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project_image {
+            width: 100%;
+            max-width: 600px; /* Default max width for larger screens */
+            height: auto;
+            margin-bottom: 20px;
         }
         .project_text {
-            flex: 2;
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        /* Media query for smaller image on larger screens */
+        @media (min-width: 768px) {
+            .project_image {
+                max-width: 400px; /* Adjust this value to make the image smaller on larger screens */
+            }
         }
     </style>
 </head>
 <body>
-    
     <!--================Header Menu Area =================-->
     <header class="header_area">
         <div class="main_menu">
@@ -65,102 +86,38 @@
         </div>
     </header>
     <!--================Header Menu Area =================-->
+
     <!--================Home Banner Area =================-->
-    <section class="home_banner_area">
-        <div class="container box_1620">
-            <div class="banner_inner">
-                <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Magic AI Project Overview</h3>
-                <div class="project_content">
-                    <img src="img/gallery/mtg_img.png" alt="Magic AI" class="project_image" style="width: 500px; height: 500px; margin-right: 20px;"> <!-- Adjusted image size -->
-                    <div class="project_text">
-                        <h4>Introduction</h4>
-                        <p>I built this project because I wanted to make an attempt at building a machine learning model to play Magic: The Gathering (MTG). MTG is such a complex game that it required distilling the game into a much simpler version. Encoding the action space was a challenging task because it's difficult to label any action as a single point, given that many actions rely on certain aspects of the game state, such as blocking, which involves both the attacker and the blocker.</p>
-                        <p>To address this, I decided to encode every action a player makes in a turn as different actions, allowing players to make multiple actions in a row until they pass priority. While the model isn't perfect and requires further tweaking to improve, it has been able to defeat an opponent using random actions by playing more cautiously, particularly by being more defensive and careful with its attacks.</p>
+<section class="home_banner_area">
+    <div class="container box_1620">
+        <div class="banner_inner">
+            <h3 class="project_title">Magic AI Project Overview</h3>
+            <div class="project_content">
+                <img src="img/gallery/mtg_img.png" alt="Magic AI" class="project_image">
+                <div class="project_text">
+                    <h4>Introduction</h4>
+                    <p>This project aims to develop a machine learning model capable of playing Magic: The Gathering (MTG). Due to MTG's complexity, the game was distilled into a simpler version. Encoding the action space posed a challenge, as many actions depend on specific game states, such as blocking, which involves both the attacker and the blocker.</p>
+                    <p>To address this, each action a player makes during a turn was encoded separately, allowing for multiple consecutive actions until the player passes priority. Although the model is not yet perfect and needs further refinement, it has successfully defeated opponents using random actions by adopting a more cautious, defensive play style.</p>
 
-                        <h4>Technology</h4>
-                        <p>This project leverages several key technologies to build and train the AI model effectively:</p>
-                        <ul>
-                            <li><strong>Python:</strong> The primary programming language used for building the environment and implementing the AI model.</li>
-                            <li><strong>PettingZoo:</strong> A multi-agent reinforcement learning library that provides the framework for simulating the game environment.</li>
-                            <li><strong>Stable-Baselines3 (SB3):</strong> A set of reliable implementations of reinforcement learning algorithms that integrate well with PettingZoo.</li>
-                            <li><strong>NumPy & Pandas:</strong> Libraries used for handling data processing and manipulation tasks during training.</li>
-                            <li><strong>TensorFlow/PyTorch:</strong> Frameworks potentially used for building and training the neural networks.</li>
-                        </ul>
+                    <h4>Technology</h4>
+                    <p>This project utilizes several key technologies to build and train the AI model effectively:</p>
+                    <ul>
+                        <li><strong>Python:</strong> The main programming language used for creating the environment and implementing the AI model.</li>
+                        <li><strong>PettingZoo:</strong> A multi-agent reinforcement learning library that provides the framework for simulating the game environment.</li>
+                        <li><strong>Stable-Baselines3 (SB3):</strong> A collection of reliable reinforcement learning algorithm implementations that integrate well with PettingZoo.</li>
+                        <li><strong>NumPy & Pandas:</strong> Libraries used for data processing and manipulation during training.</li>
+                        <li><strong>TensorFlow/PyTorch:</strong> Frameworks potentially used for building and training neural networks.</li>
+                    </ul>
 
-                        <h4>Project Repository:</h4>
-                        <p>For more detail, visit the project repository on <a href="https://github.com/Jack-Kiefer/magic-ai" target="_blank">GitHub</a>.</p> <!-- Use your actual GitHub link -->
-                    </div>
+                    <h4>Project Repository:</h4>
+                    <p>For more details, visit the project repository on <a href="https://github.com/Jack-Kiefer/magic-ai" target="_blank">GitHub</a>.</p> <!-- Use your actual GitHub link -->
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
 
 
-    
-    <!--================End Home Banner Area =================-->
-    
-    <!--================Footer Area =================-->
-    <footer class="footer_area p_120">
-        <div class="container">
-            <div class="row footer_inner">
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget ab_widget">
-                        <div class="f_title">
-                            <h3>About Me</h3>
-                        </div>
-                        <p>I am a game developer and software engineer, always eager to learn and tackle new challenges. My goal is to create engaging and innovative digital experiences.</p>
-                    </aside>
-                </div>
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget news_widget">
-                        <div class="f_title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>Stay updated with my latest projects and articles.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>        
-                                </div>                
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-lg-2">
-                    <aside class="f_widget social_widget">
-                        <div class="f_title">
-                            <h3>Follow Me</h3>
-                        </div>
-                        <p>Let us be social</p>
-                        <ul class="list">
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="js/theme.js"></script>
 </body>
 </html>

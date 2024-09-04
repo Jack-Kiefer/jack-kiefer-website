@@ -24,23 +24,47 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
         .project_title {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         .project_content {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .project_video {
-            width: 800px; /* Increased width for larger video */
-            height: 450px; /* Increased height for larger video */
-            margin-right: 20px; /* Adds space between the video and text */
+            width: 100%;
+            max-width: 800px; /* Max width for larger screens */
+            height: auto;
+            aspect-ratio: 16/9; /* Keeps the video aspect ratio */
+            margin-bottom: 20px;
         }
         .project_text {
-            flex: 2;
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .project_title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .project_video {
+                max-width: 100%;
+            }
+            .project_text {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -75,19 +99,19 @@
     <section class="home_banner_area">
         <div class="container box_1620">
             <div class="banner_inner">
-                <h3 class="project_title" style="font-size: 36px; font-weight: bold;">Scrapyard Scramble Project Overview</h3>
+                <h3 class="project_title">Scrapyard Scramble Project Overview</h3>
                 <div class="project_content">
-                    <iframe class="project_video" width="800" height="450" src="https://www.youtube.com/embed/SYSb7w6SwKA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="project_video" src="https://www.youtube.com/embed/SYSb7w6SwKA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_text">
                         <h4>Introduction</h4>
                         <p>Built as the term project for the 15-112 course at CMU, Scrapyard Scramble is a two-player card drafting game where players assume the roles of competing inventors. The objective is to build the best robot using parts from a shared scrap pile. The game offers both player vs. player mode and a challenging AI opponent with three difficulty levels, providing varied and engaging gameplay.</p>
-                        <p>Players take turns drafting cards from a shared pool, strategically selecting parts to enhance their robot's attributes. The game incorperates multiple ways to improve your such as stats which gives a points boost to the robot with the higher speed or intelligence. Additionally, counter play is available as shields can be good responses to their corresponding weapon.</p>
+                        <p>Players take turns drafting cards from a shared pool, strategically selecting parts to enhance their robot's attributes. The game incorporates multiple ways to improve your robot, such as stats which give a points boost to the robot with the higher speed or intelligence. Additionally, counter-play is available as shields can be good responses to their corresponding weapons.</p>
 
                         <h4>Technologies</h4>
                         <ul>
                             <li><strong>Python:</strong> The primary programming language used to build the game's logic and mechanics.</li>
                             <li><strong>Tkinter:</strong> A Python library used for creating the graphical user interface, enabling an interactive and visually appealing game experience.</li>
-                            <li><strong>Minimax Algorithm:</strong> Implemented for creating different difficulty levels in the AI opponent be controlling the search depth, providing a scalable challenge for players.</li>
+                            <li><strong>Minimax Algorithm:</strong> Implemented for creating different difficulty levels in the AI opponent by controlling the search depth, providing a scalable challenge for players.</li>
                         </ul>
 
                         <h4>Project Repository:</h4>
@@ -98,53 +122,7 @@
         </div>
     </section>
     <!--================End Home Banner Area =================-->
-    
-    <!--================Footer Area =================-->
-    <footer class="footer_area p_120">
-        <div class="container">
-            <div class="row footer_inner">
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget ab_widget">
-                        <div class="f_title">
-                            <h3>About Me</h3>
-                        </div>
-                        <p>I am a game developer and software engineer, always eager to learn and tackle new challenges. My goal is to create engaging and innovative digital experiences.</p>
-                    </aside>
-                </div>
-                <div class="col-lg-5 col-sm-6">
-                    <aside class="f_widget news_widget">
-                        <div class="f_title">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <p>Stay updated with my latest projects and articles.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>        
-                                </div>                
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-lg-2">
-                    <aside class="f_widget social_widget">
-                        <div class="f_title">
-                            <h3>Follow Me</h3>
-                        </div>
-                        <p>Let us be social</p>
-                        <ul class="list">
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--================End Footer Area =================-->
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
