@@ -269,8 +269,9 @@ Table of Content:
 
 @media (max-width: 600px) {
   .modal-content {
+      margin-top: 30%;
       width: 95%; /* Use more of the width on smaller screens */
-      height: 90vh; /* Use more of the height on smaller screens */
+      height: 60vh; /* Use more of the height on smaller screens */
   }
 }
 
@@ -403,11 +404,11 @@ Table of Content:
 /* Responsive adjustments for mobile only */
 @media (max-width: 768px) {
   .timeline {
-    padding: 0;
+    padding-left:20%;
   }
 
   .timeline::before {
-    left: 10%; /* Line on the left side */
+    left: 18%; /* Line on the left side */
     transform: translateX(0); /* No translation needed */
   }
 
@@ -431,7 +432,7 @@ Table of Content:
   .timeline-content {
     text-align: left;
     margin-left: 0; /* No additional margin */
-    margin-right: auto; /* Ensures the box doesn't move right */
+    margin-right:0;
     width: calc(100% - 80px); /* Account for icon space */
     max-width: 70%; /* Constrain width for readability */
   }
@@ -443,10 +444,10 @@ Table of Content:
   }
 
   .timeline-item:nth-child(even) .timeline-icon{
-    left: -10px; /* Align icon with the line */
+    left: -67px; /* Align icon with the line */
   }
   .timeline-item:nth-child(odd) .timeline-icon {
-    left: -30px; /* Align icon with the line */
+    left: -87px; /* Align icon with the line */
   }
 
   .timeline-item:nth-child(even) .timeline-content,
@@ -729,7 +730,7 @@ button:focus {
       align-self: center;
       text-align: left; }
       .home_banner_area .banner_inner .banner_content .media .d-flex {
-        padding-right: 125px; }
+        padding-right: 5%; }
       .home_banner_area .banner_inner .banner_content .media .media-body {
         vertical-align: middle;
         align-self: center; }
@@ -3007,7 +3008,7 @@ h6 {
       display: block;
       background: rgba(255, 255, 255, 0.2);
       position: absolute;
-      left: 46%;
+      left: 30%;
       top: 30px;
       transform: translateX(-50%); }
       .tabs_inner .tab-content .tab-pane .list li span:before {
