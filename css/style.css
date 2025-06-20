@@ -229,61 +229,153 @@ html {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
+  z-index: 1000; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto; /* Centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Adjust the width as needed */
-  max-width: 900px; /* Maximum width */
-  height: 90vh; /* Adjust the height to take up 80% of the viewport height */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  position: relative; /* Position for close button */
+  background-color: #ffffff;
+  margin: 2% auto; /* Centered */
+  padding: 0;
+  border: none;
+  width: 90%; /* Wider for better viewing */
+  max-width: 1200px; /* Larger maximum width */
+  height: 95vh; /* Almost full height */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.download-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.download-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
+
+.download-btn i {
+  margin-right: 8px;
 }
 
 .close {
-  color: #535252; /* Set to white or a bright color for contrast */
-  position: absolute;
-  top: -10px;
-  right: 5px;
-  font-size: 70px; /* Increase size for better visibility */
+  color: white;
+  font-size: 32px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Optional: subtle shadow to enhance contrast */
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .close:hover,
 .close:focus {
-  color: #ff6347; /* Change to a bright color on hover (e.g., Tomato color) */
-  transform: scale(1.2); /* Slightly enlarge on hover for emphasis */
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.9); /* Make shadow more prominent on hover */
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
 }
 
+.modal-body {
+  flex: 1;
+  padding: 0;
+  position: relative;
+  background: #f8f9fa;
+}
 
-@media (max-width: 600px) {
+#resumeIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+@media (max-width: 768px) {
   .modal-content {
-      margin-top: 30%;
-      width: 95%; /* Use more of the width on smaller screens */
-      height: 60vh; /* Use more of the height on smaller screens */
+    margin: 1% auto;
+    width: 95%;
+    height: 98vh;
+  }
+  
+  .modal-header {
+    padding: 15px 20px;
+  }
+  
+  .modal-header h3 {
+    font-size: 20px;
+  }
+  
+  .modal-actions {
+    gap: 15px;
+  }
+  
+  .download-btn {
+    padding: 8px 15px;
+    font-size: 14px;
   }
 }
 
-
-.resume-iframe {
-  width: 100%; /* Full width of the modal content */
-  height: 100%; /* Full height of the modal content */
-  border: none; /* Remove border for a cleaner look */
+@media (max-width: 480px) {
+  .modal-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .modal-actions {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 
